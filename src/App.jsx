@@ -1,5 +1,6 @@
 import Hero3D from './components/Hero3D';
 import AboutAndSkills from './components/AboutAndSkills';
+import CosmicParallax from './components/CosmicParallax';
 import ProjectsShowcase from './components/ProjectsShowcase';
 import ContactSection from './components/ContactSection';
 
@@ -8,6 +9,7 @@ export default function App() {
     <div className="min-h-screen bg-[#0a0b0f] text-white antialiased">
       <Hero3D />
       <AboutAndSkills />
+      <CosmicParallax />
       <ProjectsShowcase />
       <ContactSection />
       <footer className="border-t border-white/10 bg-[#0a0b10] py-8 text-center text-xs text-violet-100/60">

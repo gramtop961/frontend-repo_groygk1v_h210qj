@@ -1,19 +1,41 @@
-import { motion } from 'framer-motion';
+import { motion, useMotionValue, useTransform } from 'framer-motion';
+import { useEffect } from 'react';
 import Spline from '@splinetool/react-spline';
 
 export default function Hero3D() {
+  // Mouse parallax for floating UI chips
+  const mx = useMotionValue(0);
+  const my = useMotionValue(0);
+  const tX = useTransform(mx, [-1, 1], [-15, 15]);
+  const tY = useTransform(my, [-1, 1], [-10, 10]);
+
+  useEffect(() => {
+    const onMove = (e) => {
+      const { innerWidth, innerHeight } = window;
+      const x = (e.clientX / innerWidth) * 2 - 1;
+      const y = (e.clientY / innerHeight) * 2 - 1;
+      mx.set(x);
+      my.set(y);
+    };
+    window.addEventListener('mousemove', onMove);
+    return () => window.removeEventListener('mousemove', onMove);
+  }, [mx, my]);
+
   return (
-    <section id="home" className="relative min-h-screen w-full overflow-hidden bg-[#0a0b0f] text-white">
+    <section id="home" className="relative min-h-screen w-full overflow-hidden bg-[#06070b] text-white">
+      {/* Full-width Spline cover background */}
       <div className="absolute inset-0">
         <Spline
-          scene="https://prod.spline.design/EF7JOSsHLk16Tlw9/scene.splinecode"
+          scene="https://prod.spline.design/7m4PRZ7kg6K1jPfF/scene.splinecode"
           style={{ width: '100%', height: '100%' }}
         />
       </div>
 
-      <div className="pointer-events-none absolute inset-0 bg-gradient-to-b from-black/60 via-black/20 to-black/80" />
+      {/* Gradient veils (do not block interactions) */}
+      <div className="pointer-events-none absolute inset-0 bg-gradient-to-b from-black/70 via-black/30 to-black/80" />
       <div className="pointer-events-none absolute -inset-x-40 -top-40 h-[60rem] w-[80rem] rounded-full bg-[radial-gradient(circle_at_center,rgba(120,119,198,0.25),transparent_60%)] blur-3xl" />
 
+      {/* Content */}
       <div className="relative z-10 mx-auto flex min-h-screen max-w-7xl flex-col items-center justify-center px-6">
         <motion.div
           initial={{ opacity: 0, y: 40 }}
@@ -39,8 +61,9 @@ export default function Hero3D() {
           </motion.p>
         </motion.div>
 
+        {/* CTA */}
         <motion.div
-          className="mt-10 flex items-center gap-3"
+          className="mt-10 flex flex-wrap items-center justify-center gap-3"
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ delay: 0.45, duration: 0.8 }}
@@ -60,6 +83,16 @@ export default function Hero3D() {
           </a>
         </motion.div>
 
+        {/* Floating parallax chips */}
+        <motion.div style={{ x: tX, y: tY }} className="pointer-events-none relative mt-12 grid grid-cols-2 gap-3 sm:grid-cols-4">
+          {['Parallax', 'Spline 3D', 'Framer Motion', 'Neon Futurism'].map((k) => (
+            <div key={k} className="rounded-full border border-white/10 bg-white/10 px-3 py-1 text-xs text-white/80 backdrop-blur-md">
+              {k}
+            </div>
+          ))}
+        </motion.div>
+
+        {/* Orbital accent */}
         <motion.div
           aria-hidden
           initial={{ rotate: 0 }}
