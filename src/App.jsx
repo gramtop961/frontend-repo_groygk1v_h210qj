@@ -1,28 +1,18 @@
-import { useState } from 'react'
+import Hero3D from './components/Hero3D';
+import AboutAndSkills from './components/AboutAndSkills';
+import ProjectsShowcase from './components/ProjectsShowcase';
+import ContactSection from './components/ContactSection';
 
-function App() {
-  const [count, setCount] = useState(0)
-
+export default function App() {
   return (
-    <div className="min-h-screen bg-gradient-to-br from-purple-50 to-blue-50 flex items-center justify-center">
-      <div className="bg-white p-8 rounded-lg shadow-lg">
-        <h1 className="text-3xl font-bold text-gray-800 mb-4">
-          Vibe Coding Platform
-        </h1>
-        <p className="text-gray-600 mb-6">
-          Your AI-powered development environment
-        </p>
-        <div className="text-center">
-          <button
-            onClick={() => setCount(count + 1)}
-            className="bg-blue-500 hover:bg-blue-600 text-white font-semibold py-2 px-4 rounded"
-          >
-            Count is {count}
-          </button>
-        </div>
-      </div>
+    <div className="min-h-screen bg-[#0a0b0f] text-white antialiased">
+      <Hero3D />
+      <AboutAndSkills />
+      <ProjectsShowcase />
+      <ContactSection />
+      <footer className="border-t border-white/10 bg-[#0a0b10] py-8 text-center text-xs text-violet-100/60">
+        © {new Date().getFullYear()} Alexander Novak — Crafted with motion, 3D, and a love for detail.
+      </footer>
     </div>
-  )
+  );
 }
-
-export default App
