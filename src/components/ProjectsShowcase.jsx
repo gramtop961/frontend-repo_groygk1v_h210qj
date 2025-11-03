@@ -158,7 +158,7 @@ export default function ProjectsShowcase() {
   };
 
   return (
-    <section id="projects" className="relative bg-[#0a0b0f] py-24 text-white">
+    <section id="projects" className="relative py-24 text-white">
       <div className="pointer-events-none absolute inset-0 bg-[radial-gradient(1000px_400px_at_10%_10%,rgba(168,85,247,0.15),transparent),radial-gradient(1000px_400px_at_90%_20%,rgba(34,211,238,0.12),transparent)]" />
       <div className="relative mx-auto max-w-7xl px-6">
         <div className="mb-10 flex items-end justify-between">

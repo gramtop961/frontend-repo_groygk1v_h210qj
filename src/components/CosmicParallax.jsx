@@ -26,7 +26,7 @@ export default function CosmicParallax() {
   }, [mx, my]);
 
   return (
-    <section className="relative overflow-hidden bg-[#07080e] py-28 text-white">
+    <section id="capabilities" className="relative overflow-hidden py-28 text-white">
       {/* Background cosmic gradients */}
       <div className="pointer-events-none absolute inset-0">
         <motion.div style={{ y: driftUp, opacity: fadeIn }} className="absolute -left-40 top-0 h-[28rem] w-[28rem] rounded-full bg-fuchsia-500/20 blur-3xl" />

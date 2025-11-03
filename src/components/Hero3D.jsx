@@ -22,17 +22,17 @@ export default function Hero3D() {
   }, [mx, my]);
 
   return (
-    <section id="home" className="relative min-h-screen w-full overflow-hidden bg-[#06070b] text-white">
-      {/* Full-width Spline cover background */}
+    <section id="home" className="relative min-h-screen w-full overflow-hidden text-white">
+      {/* Full-width Spline cover background (grid of metallic cubes) */}
       <div className="absolute inset-0">
         <Spline
-          scene="https://prod.spline.design/7m4PRZ7kg6K1jPfF/scene.splinecode"
+          scene="https://prod.spline.design/Gt5HUob8aGDxOUep/scene.splinecode"
           style={{ width: '100%', height: '100%' }}
         />
       </div>
 
       {/* Gradient veils (do not block interactions) */}
-      <div className="pointer-events-none absolute inset-0 bg-gradient-to-b from-black/70 via-black/30 to-black/80" />
+      <div className="pointer-events-none absolute inset-0 bg-gradient-to-b from-black/70 via-black/40 to-black/80" />
       <div className="pointer-events-none absolute -inset-x-40 -top-40 h-[60rem] w-[80rem] rounded-full bg-[radial-gradient(circle_at_center,rgba(120,119,198,0.25),transparent_60%)] blur-3xl" />
 
       {/* Content */}

@@ -39,7 +39,7 @@ const timeline = [
 
 export default function AboutAndSkills() {
   return (
-    <section id="about" className="relative bg-[#0a0b0f] py-24 text-white">
+    <section id="about" className="relative py-24 text-white">
       <div className="pointer-events-none absolute inset-0 bg-[radial-gradient(1200px_600px_at_20%_10%,rgba(124,58,237,0.2),transparent),radial-gradient(800px_400px_at_80%_30%,rgba(59,130,246,0.18),transparent)]" />
       <div className="relative mx-auto max-w-7xl px-6">
         <div className="grid gap-10 md:grid-cols-2">

@@ -10,7 +10,7 @@ export default function ContactSection() {
   };
 
   return (
-    <section id="contact" className="relative overflow-hidden bg-[#0a0b0f] py-24 text-white">
+    <section id="contact" className="relative overflow-hidden py-24 text-white">
       {/* Particle-like background using blurred dots */}
       <div className="pointer-events-none absolute inset-0">
         <div className="absolute -left-40 top-10 h-96 w-96 rounded-full bg-fuchsia-500/10 blur-3xl" />
