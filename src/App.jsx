@@ -1,7 +1,7 @@
 import NavBar from './components/NavBar';
 import Hero3D from './components/Hero3D';
-import ProjectsShowcase from './components/ProjectsShowcase';
-import ContactSection from './components/ContactSection';
+import AboutAndSkills from './components/AboutAndSkills';
+import SiteSections from './components/SiteSections';
 
 export default function App() {
   return (
@@ -23,8 +23,8 @@ export default function App() {
 
       <main className="relative">
         <Hero3D />
-        <ProjectsShowcase />
-        <ContactSection />
+        <AboutAndSkills />
+        <SiteSections />
       </main>
 
       <footer className="border-t border-white/10 py-8 text-center text-xs text-violet-100/60">

@@ -23,10 +23,10 @@ export default function Hero3D() {
 
   return (
     <section id="home" className="relative min-h-screen w-full overflow-hidden text-white">
-      {/* Full-width Spline cover background (grid of metallic cubes) */}
+      {/* Full-width Spline cover background (Game Boy playful scene) */}
       <div className="absolute inset-0">
         <Spline
-          scene="https://prod.spline.design/Gt5HUob8aGDxOUep/scene.splinecode"
+          scene="https://prod.spline.design/rwKT-aWtlkdY-8UV/scene.splinecode"
           style={{ width: '100%', height: '100%' }}
         />
       </div>
